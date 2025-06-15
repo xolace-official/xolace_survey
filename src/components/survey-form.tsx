@@ -124,7 +124,7 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
   return
 }
 
-      const { data, error } = await supabase.from('surveys').insert({
+      const { error } = await supabase.from('surveys').insert({
         visit_frequency: formData.visitFrequency,
         time_per_visit: formData.timePerVisit,
         preferred_time: formData.preferredTime,
