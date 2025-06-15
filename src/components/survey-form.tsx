@@ -49,27 +49,6 @@ export function SurveyForm({ onComplete }: SurveyFormProps) {
     email: "",
   })
 
-  const defaultForm = {
-    visitFrequency: "",
-    timePerVisit: "",
-    preferredTime: "",
-    dailyPrompts: 3,
-    weeklyThemes: 3,
-    anonymousSharing: 3,
-    expertQA: 3,
-    featureRanking: [] as string[],
-    overallSatisfaction: 3,
-    supportLevel: 3,
-    calmness: 3,
-    dailyMotivation: "",
-    newIdeas: "",
-    improvements: "",
-    ageRange: "",
-    timeZone: "",
-    hearAboutUs: "",
-    email: "",
-  }
-
   const sections = [
     { title: "Usage & Habits", component: UsageHabitsSection },
     { title: "Feature Interest", component: FeatureInterestSection },

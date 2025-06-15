@@ -59,7 +59,7 @@ export function ThankYouSection({ onRestart }: ThankYouSectionProps) {
           {/* Next Steps */}
           <div className="space-y-4">
             <p className="text-gray-600 dark:text-gray-400">
-              We'll review every response carefully and share updates on how your input shapes Xolace.
+              We&apos;ll review every response carefully and share updates on how your input shapes Xolace.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
