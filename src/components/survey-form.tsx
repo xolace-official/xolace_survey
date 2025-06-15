@@ -27,9 +27,9 @@ export function SurveyForm({ onComplete }: SurveyFormProps) {
 
     // Feature Interest
     dailyPrompts: 3,
-    weeklyThemes: 3,
+    postVotes: 3,
     anonymousSharing: 3,
-    expertQA: 3,
+    expertInsights: 3,
     featureRanking: [] as string[],
 
     // Satisfaction
@@ -44,7 +44,6 @@ export function SurveyForm({ onComplete }: SurveyFormProps) {
 
     // Demographics
     ageRange: "",
-    timeZone: "",
     hearAboutUs: "",
     email: "",
   })
@@ -64,16 +63,15 @@ export function SurveyForm({ onComplete }: SurveyFormProps) {
       setCurrentSection(currentSection + 1)
     } else {
       // Submit form
-      console.log("Survey completed:", formData)
       /*
       {
     "visitFrequency": "several-weekly",
     "timePerVisit": "10+",
     "preferredTime": "afternoon",
     "dailyPrompts": 2,
-    "weeklyThemes": 4,
+    "postVotes": 4,
     "anonymousSharing": 3,
-    "expertQA": 3,
+    "expertInsights": 3,
     "featureRanking": [],
     "overallSatisfaction": 3,
     "supportLevel": 3,
@@ -118,10 +116,10 @@ create table public.surveys (
 */
 
 if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.preferredTime === "" && 
-  formData.dailyPrompts === 3 && formData.weeklyThemes === 3 && formData.anonymousSharing === 3 && formData.expertQA === 3 
+  formData.dailyPrompts === 3 && formData.postVotes === 3 && formData.anonymousSharing === 3 && formData.expertInsights === 3 
   && formData.featureRanking.length === 0 && formData.overallSatisfaction === 3 && formData.supportLevel === 3 && formData.calmness === 3 && 
   formData.dailyMotivation === "" && formData.newIdeas === "" && formData.improvements === "" && formData.ageRange === "" &&
-  formData.timeZone === "" && formData.hearAboutUs === "" && formData.email === "") {
+  formData.hearAboutUs === "" && formData.email === "") {
   toast("Eeerm🥶 nothing seems to be filled out. Please take the survey before submitting.😅")
   return
 }
@@ -131,9 +129,9 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
         time_per_visit: formData.timePerVisit,
         preferred_time: formData.preferredTime,
         daily_prompts: formData.dailyPrompts,
-        weekly_themes: formData.weeklyThemes,
+        post_votes: formData.postVotes,
         anonymous_sharing: formData.anonymousSharing,
-        expert_qa: formData.expertQA,
+        expert_insights: formData.expertInsights,
         feature_ranking: formData.featureRanking,
         overall_satisfaction: formData.overallSatisfaction,
         support_level: formData.supportLevel,
@@ -142,7 +140,6 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
         new_ideas: formData.newIdeas,
         improvements: formData.improvements,
         age_range: formData.ageRange,
-        time_zone: formData.timeZone,
         hear_about_us: formData.hearAboutUs,
         email: formData.email,
       })
@@ -152,8 +149,6 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
         console.error('Error submitting survey:', error)
         return
       }
-
-      console.log('Survey submitted successfully:', data)
 
       onComplete()
     }
