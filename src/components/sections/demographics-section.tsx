@@ -6,7 +6,9 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface DemographicsSectionProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   updateData: (updates: any) => void
 }
 
@@ -34,7 +36,7 @@ export function DemographicsSection({ data, updateData }: DemographicsSectionPro
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Age Range (Optional)</h3>
         <RadioGroup
-          value={data.ageRange}
+          value={data?.ageRange}
           onValueChange={(value) => updateData({ ageRange: value })}
           className="grid grid-cols-2 md:grid-cols-3 gap-4"
         >
@@ -104,7 +106,7 @@ export function DemographicsSection({ data, updateData }: DemographicsSectionPro
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Stay Connected (Optional)</h3>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Leave your email if you'd like updates on new features or beta invites
+          Leave your email if you&apos;d like updates on new features or beta invites
         </p>
         <Input
           type="email"

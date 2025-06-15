@@ -1,9 +1,6 @@
 "use client"
 
-import { useTheme } from "next-themes"
-
 export function FloatingElements() {
-  const { theme } = useTheme()
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -13,7 +14,7 @@ export function UsageHabitsSection({ data, updateData }: UsageHabitsSectionProps
     <div className="space-y-8">
       <div className="text-center mb-8">
         <p className="text-gray-600 dark:text-gray-400">
-          Help us understand how you'd like to engage with our quiet campfire
+          Help us understand how you&apos;d like to engage with our quiet campfire
         </p>
       </div>
 

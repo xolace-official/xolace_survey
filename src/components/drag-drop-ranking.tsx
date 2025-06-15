@@ -12,6 +12,7 @@ interface DragDropRankingProps {
 }
 
 export function DragDropRanking({ items, value, onChange }: DragDropRankingProps) {
+  console.log(items)
   const [draggedItem, setDraggedItem] = useState<string | null>(null)
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null)
 
