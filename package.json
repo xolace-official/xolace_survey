@@ -23,5 +23,12 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "@eslint/eslintrc": "^3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "unrs-resolver",
+      "@tailwindcss/oxide"
+    ]
   }
 }
