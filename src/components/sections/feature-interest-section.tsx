@@ -2,7 +2,7 @@
 "use client"
 
 import { Slider } from "@/components/ui/slider"
-import { DragDropRanking } from "@/components/drag-drop-ranking"
+import { MobileFriendlyRanking } from "@/components/mobile-friendly-ranking"  
 
 interface FeatureInterestSectionProps {
   data: any
@@ -89,9 +89,11 @@ export function FeatureInterestSection({ data, updateData }: FeatureInterestSect
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
           Rank these potential features by priority
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Drag to reorder - most important at the top</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Most important at the top, least important at the bottom
+        </p>
 
-        <DragDropRanking
+        <MobileFriendlyRanking
           items={rankingOptions}
           value={data.featureRanking.length > 0 ? data.featureRanking : rankingOptions}
           onChange={(ranking) => updateData({ featureRanking: ranking })}
