@@ -17,29 +17,27 @@ export function FeatureInterestSection({ data, updateData }: FeatureInterestSect
       description: "Gentle questions to help you reflect and share",
     },
     {
-      key: "weeklyThemes",
-      title: "Weekly Themed Discussions",
-      description: "Topics like creativity, self-care, gratitude",
+      key: "postVotes",
+      title: "Post Voting",
+      description: "Upvote posts you find helpful or insightful and downvote posts you find unhelpful",
     },
     {
       key: "anonymousSharing",
-      title: "Anonymous Peer Sharing Circles",
+      title: "Anonymous Peer Sharing",
       description: "Safe spaces to share without judgment",
     },
     {
-      key: "expertQA",
-      title: "Short Expert Q&A Sessions",
-      description: "Brief insights from mental health professionals",
+      key: "expertInsights",
+      title: "Expert Insights",
+      description: "Brief insights from mental health professionals(Health tips)",
     },
   ]
 
   const rankingOptions = [
-    "Daily mindfulness reminders",
-    "Community challenges (gratitude, creativity)",
-    "One-on-one peer support matching",
-    "Guided meditation sessions",
-    "Weekly reflection journals",
-    "Anonymous mood check-ins",
+    "AI health assistant",
+    "Mentors video sharing their journey",
+    "One-on-one professional support",
+    "Mini-campfire(communities for dedicated spaces)",
   ]
 
   return (

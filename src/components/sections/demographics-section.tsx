@@ -3,7 +3,6 @@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface DemographicsSectionProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -15,16 +14,16 @@ interface DemographicsSectionProps {
 export function DemographicsSection({ data, updateData }: DemographicsSectionProps) {
   const ageRanges = ["16-24", "25-34", "35-44", "45-54", "55-64", "65+"]
 
-  const timeZones = [
-    "Pacific (PST/PDT)",
-    "Mountain (MST/MDT)",
-    "Central (CST/CDT)",
-    "Eastern (EST/EDT)",
-    "Atlantic",
-    "Europe",
-    "Asia",
-    "Other",
-  ]
+  // const timeZones = [
+  //   "Pacific (PST/PDT)",
+  //   "Mountain (MST/MDT)",
+  //   "Central (CST/CDT)",
+  //   "Eastern (EST/EDT)",
+  //   "Atlantic",
+  //   "Europe",
+  //   "Asia",
+  //   "Other",
+  // ]
 
   return (
     <div className="space-y-8">
@@ -55,7 +54,7 @@ export function DemographicsSection({ data, updateData }: DemographicsSectionPro
       </div>
 
       {/* Time Zone */}
-      <div className="space-y-4">
+      {/* <div className="space-y-4">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Time Zone (Optional)</h3>
         <Select value={data.timeZone} onValueChange={(value) => updateData({ timeZone: value })}>
           <SelectTrigger className="backdrop-blur-sm bg-white/10 dark:bg-gray-800/10 border-white/20 dark:border-gray-700/20">
@@ -69,7 +68,7 @@ export function DemographicsSection({ data, updateData }: DemographicsSectionPro
             ))}
           </SelectContent>
         </Select>
-      </div>
+      </div> */}
 
       {/* How did you hear about us */}
       <div className="space-y-4">
