@@ -148,6 +148,7 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
       })
 
       if (error) {
+        toast.error("Oops🫢! Error submitting survey. Please try again later.")
         console.error('Error submitting survey:', error)
         return
       }
@@ -183,7 +184,7 @@ if (formData.visitFrequency === "" && formData.timePerVisit === "" && formData.p
           </div>
 
           <Progress value={progress} className="h-2" />
-          <p className="text-xs text-rose-600 dark:text-rose-400">
+          <p className="text-xs sm:text-sm text-rose-600 dark:text-rose-400">
             Note: This survey is anonymous and no question is required. But we plead for you to take a moment to share your thoughts and feedback.
           </p>          
         </div>
