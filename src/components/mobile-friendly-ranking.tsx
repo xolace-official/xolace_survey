@@ -23,7 +23,7 @@ export function MobileFriendlyRanking({ items, value, onChange }: MobileFriendly
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
   const [dropTargetIndex, setDropTargetIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const dragElementRef = useRef<HTMLDivElement>(null)
+  //const dragElementRef = useRef<HTMLDivElement>(null)
 
   // Detect touch device
   useEffect(() => {

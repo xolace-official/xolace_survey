@@ -64,7 +64,7 @@ export function WelcomeSection({ onStart }: WelcomeSectionProps) {
           <div className="bg-white/5 rounded-lg p-6 border border-white/10 text-start mb-4">
           <h4 className="text-lg font-semibold mb-3 text-blue-300">Why Your Feedback Matters</h4>
           <p className="text-white text-sm sm:text-base">
-            We're in the early stages of creating something special, and your insights will directly 
+            We&apos;re in the early stages of creating something special, and your insights will directly 
             shape how Xolace grows. This survey takes about 5-7 minutes and will help us understand 
             what features would bring you back daily, what you value most, and how we can better 
             serve your need for genuine, peaceful digital connection.
