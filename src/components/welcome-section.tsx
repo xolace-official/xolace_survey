@@ -28,7 +28,7 @@ export function WelcomeSection({ onStart }: WelcomeSectionProps) {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 dark:text-gray-300 leading-relaxed">
-              Unlike the noisy, addictive nature of traditional social media, <strong>Xolace</strong> is your calm space— A place where you can check in, share experiences, and leave feeling better than when you arrived..
+              Unlike the noisy, addictive nature of traditional social media, <strong>Xolace</strong> is your calm space. A place where you can check in, share experiences, and leave feeling better than when you arrived..
             </p>
           </div>
 

@@ -9,6 +9,8 @@ import { BackgroundElements } from "@/components/background-elements"
 export default function SurveyPage() {
   const [currentStep, setCurrentStep] = useState<"welcome" | "survey" | "complete">("welcome")
 
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900 relative overflow-hidden">
       <BackgroundElements />

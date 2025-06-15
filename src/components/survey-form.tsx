@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState , useEffect} from "react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -47,6 +47,13 @@ export function SurveyForm({ onComplete }: SurveyFormProps) {
     hearAboutUs: "",
     email: "",
   })
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }, [currentSection])
 
   const sections = [
     { title: "Usage & Habits", component: UsageHabitsSection },
